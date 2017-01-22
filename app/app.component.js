@@ -21,17 +21,27 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             // Decorador component, indicamos en que etiqueta se va a cargar la plantilla
             AppComponent = (function () {
                 function AppComponent() {
-                    this.pelicula = 'Batman v. Superman';
-                    this.director = 'Zack Snider';
-                    this.anio = 2016;
+                    this.peliculas = [
+                        {
+                            "pelicula": "Batman v. Superman",
+                            "director": "Zack Snider",
+                            "anio": "2016"
+                        },
+                        {
+                            "pelicula": "La verdad duele",
+                            "director": "Will Smith",
+                            "anio": "2015"
+                        },
+                        {
+                            "pelicula": "Una historia real",
+                            "director": "Desconocido",
+                            "anio": "2014"
+                        }];
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: '<h1>Peliculas en Angular 2:</h1>' +
-                            '<p>Pelicula: {{pelicula}}</p>' +
-                            '<p>Director: {{director}}</p>' +
-                            '<p>Año: {{anio}}</p>'
+                        templateUrl: 'app/templates/peliculas.html'
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
