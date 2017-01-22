@@ -2,3 +2,7 @@ h1 {
   font-family: Arial, Helvetiva;
   color: #444;
 }
+
+.showingData {
+  display: none;
+}

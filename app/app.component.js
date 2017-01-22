@@ -24,12 +24,16 @@ System.register(['angular2/core', './model/pelicula'], function(exports_1, conte
             // Decorador component, indicamos en que etiqueta se va a cargar la plantilla
             AppComponent = (function () {
                 function AppComponent() {
+                    this.mostrarDatos = false;
                     this.titulo = "Películas con Angular2";
                     this.pelicula = new pelicula_1.Pelicula(1, "Batman vs Superman", "Zack Snider", 2016);
                     this.debug();
                 }
                 AppComponent.prototype.debug = function () {
                     console.log(this.pelicula);
+                };
+                AppComponent.prototype.onShowHide = function (value) {
+                    this.mostrarDatos = value;
                 };
                 AppComponent = __decorate([
                     core_1.Component({
