@@ -1,4 +1,4 @@
-<h1>Peliculas en Angular 2:</h1>
+<h1>{{titulo}}</h1>
 
 <h3>Primera pelicula harcodeada:</h3>
 <p>Pelicula: {{peliculas[0]["pelicula"]}}</p>
@@ -8,11 +8,12 @@
 <h3>Listado de peliculas:</h3>
 <ul>
     <li *ngFor="#peli of peliculas">
-      <p>Titulo: {{peli["pelicula"]}}</p>
-      <p>Director: {{peli["director"]}}</p>
-      <p>Año: {{peli["anio"]}}</p>
+      <p>Titulo: {{peli.pelicula}}</p>
+      <p>Director: {{peli.director}}</p>
+      <p>Año: {{peli.anio}}</p>
     </li>
 </ul>
 
 <hr>
-<a href="http://victorroblesweb.es">http://victorroblesweb.es</a>
+&copy; Copyright
+<a href="http://victorroblesweb.es">link del tutorial</a>
