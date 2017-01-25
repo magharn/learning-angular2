@@ -24,8 +24,13 @@ export class AppComponent {
     this.debug();
   }
 
-  debug() {
-    console.log(this.pelicula);
+  debug(titulo = null) {
+    if (titulo == null) {
+      console.log(this.pelicula);
+    } else {
+      console.log(this.pelicula.titulo);
+    }
+
   }
 
   onShowHide(value) {
