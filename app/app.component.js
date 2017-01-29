@@ -27,6 +27,13 @@ System.register(['angular2/core', './model/pelicula'], function(exports_1, conte
                     this.mostrarDatos = false;
                     this.titulo = "Películas con Angular2";
                     this.pelicula = new pelicula_1.Pelicula(1, "Batman vs Superman", "Zack Snider", 2016);
+                    this.peliculas = [
+                        new pelicula_1.Pelicula(1, "Batman vs Superman", "Zack Snider", 2016),
+                        new pelicula_1.Pelicula(2, "La verdad duele", "Will Smith", 2016),
+                        new pelicula_1.Pelicula(3, "El señor de los anillos", "Desconocido", null),
+                        new pelicula_1.Pelicula(5, "Una historia real", "El de los", 2014),
+                        new pelicula_1.Pelicula(1, "Don Juan", "Snider", 2017)
+                    ];
                     this.debug();
                 }
                 AppComponent.prototype.debug = function (titulo) {
