@@ -16,8 +16,6 @@ export class PeliculasListComponent {
   constructor() {
     this.mostrarDatos = false;
 
-    this.pelicula = new Pelicula(1, "Batman vs Superman", "Zack Snider", 2016);
-
     this.peliculas = [
       new Pelicula(1, "Batman vs Superman", "Zack Snider", 2016),
       new Pelicula(2, "La verdad duele", "Will Smith", 2016),
@@ -26,6 +24,8 @@ export class PeliculasListComponent {
       new Pelicula(1, "Don Juan", "Snider", 2017)
 
     ];
+
+    this.pelicula = this.peliculas[0];
 
     this.debug();
   }
@@ -41,5 +41,9 @@ export class PeliculasListComponent {
 
   onShowHide(value) {
     this.mostrarDatos = value;
+  }
+
+  onCambiarPelicula(pelicula) {
+    this.pelicula = pelicula;
   }
 }

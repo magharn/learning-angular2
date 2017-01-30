@@ -19,7 +19,7 @@
 
 <ul>
   <ul *ngFor="#pelicula of peliculas" style="margin-bottom:20px;">
-    <li>Titulo: <strong>{{pelicula.titulo}}</strong></li>
+    <li (click)="onCambiarPelicula(pelicula)">Titulo: <strong>{{pelicula.titulo}}</strong></li>
     <li>Director: <strong>{{pelicula.director}}</strong></li>
     <li *ngIf="pelicula.anio">Año: <strong>{{pelicula.anio}}</strong></li>
   </ul>
