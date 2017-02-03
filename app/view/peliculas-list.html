@@ -4,14 +4,14 @@
 <button (click)="onShowHide(false)" [class.showingData]="mostrarDatos === false">Ocultar datos</button>
 
 <ul *ngIf="mostrarDatos">
-  <li>Titulo: <strong>{{pelicula.titulo}}</strong></li>
-  <li>Director: <strong>{{pelicula.director}}</strong></li>
-  <li>Año: <strong>{{pelicula.anio}}</strong></li>
+  <li>Titulo: <strong>{{selectedPelicula.titulo}}</strong></li>
+  <li>Director: <strong>{{selectedPelicula.director}}</strong></li>
+  <li>Año: <strong>{{selectedPelicula.anio}}</strong></li>
 </ul>
 
 <p>
   Cambiar título:
-  <input type="text" (keyup)="debug(true)" [(ngModel)]="pelicula.titulo" />
+  <input type="text" (keyup)="debug(true)" [(ngModel)]="selectedPelicula.titulo" />
 </p>
 
 <hr>
@@ -19,7 +19,7 @@
 
 <ul>
   <ul *ngFor="#pelicula of peliculas" style="margin-bottom:20px;">
-    <li (click)="onCambiarPelicula(pelicula)">Titulo: <strong>{{pelicula.titulo}}</strong></li>
+    <li (click)="onCambiarPelicula(pelicula)" class="pelicula-title" [class.clicked]="pelicula.titulo===selectedPelicula.titulo">Titulo: <strong>{{pelicula.titulo}}</strong></li>
     <li>Director: <strong>{{pelicula.director}}</strong></li>
     <li *ngIf="pelicula.anio">Año: <strong>{{pelicula.anio}}</strong></li>
   </ul>

@@ -31,23 +31,23 @@ System.register(['angular2/core', '../model/pelicula'], function(exports_1, cont
                         new pelicula_1.Pelicula(5, "Una historia real", "El de los", 2014),
                         new pelicula_1.Pelicula(1, "Don Juan", "Snider", 2017)
                     ];
-                    this.pelicula = this.peliculas[0];
+                    this.selectedPelicula = this.peliculas[0];
                     this.debug();
                 }
                 PeliculasListComponent.prototype.debug = function (titulo) {
                     if (titulo === void 0) { titulo = null; }
                     if (titulo == null) {
-                        console.log(this.pelicula);
+                        console.log(this.selectedPelicula);
                     }
                     else {
-                        console.log(this.pelicula.titulo);
+                        console.log(this.selectedPelicula.titulo);
                     }
                 };
                 PeliculasListComponent.prototype.onShowHide = function (value) {
                     this.mostrarDatos = value;
                 };
                 PeliculasListComponent.prototype.onCambiarPelicula = function (pelicula) {
-                    this.pelicula = pelicula;
+                    this.selectedPelicula = pelicula;
                 };
                 PeliculasListComponent = __decorate([
                     core_1.Component({

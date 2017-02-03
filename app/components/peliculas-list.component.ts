@@ -9,7 +9,7 @@ import {Pelicula} from '../model/pelicula';
 
 
 export class PeliculasListComponent {
-  public pelicula:Pelicula;
+  public selectedPelicula:Pelicula;
   public mostrarDatos:boolean;
   public peliculas:Array<Pelicula>;
 
@@ -25,16 +25,16 @@ export class PeliculasListComponent {
 
     ];
 
-    this.pelicula = this.peliculas[0];
+    this.selectedPelicula = this.peliculas[0];
 
     this.debug();
   }
 
   debug(titulo = null) {
     if (titulo == null) {
-      console.log(this.pelicula);
+      console.log(this.selectedPelicula);
     } else {
-      console.log(this.pelicula.titulo);
+      console.log(this.selectedPelicula.titulo);
     }
 
   }
@@ -44,6 +44,6 @@ export class PeliculasListComponent {
   }
 
   onCambiarPelicula(pelicula) {
-    this.pelicula = pelicula;
+    this.selectedPelicula = pelicula;
   }
 }
