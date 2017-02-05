@@ -21,6 +21,7 @@ import {CrearPeliculaComponent} from './components/crear-pelicula.component';
 @RouteConfig([
   {path:'/peliculas', name:'Peliculas', component:PeliculasListComponent, useAsDefault:true},
   {path:'/crear-pelicula', name:'CrearPelicula', component:CrearPeliculaComponent},
+  {path:'/crear-pelicula/:titulo', name:'ClonarPelicula', component:CrearPeliculaComponent},
   {path:'/contacto', name:'Contacto', component:ContactoComponent}
 ])
 

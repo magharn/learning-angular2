@@ -22,5 +22,6 @@
     <li (click)="onCambiarPelicula(pelicula)" class="pelicula-title" [class.clicked]="pelicula.titulo===selectedPelicula.titulo">Titulo: <strong>{{pelicula.titulo}}</strong></li>
     <li>Director: <strong>{{pelicula.director}}</strong></li>
     <li *ngIf="pelicula.anio">Año: <strong>{{pelicula.anio}}</strong></li>
+    <li><a [routerLink]="['ClonarPelicula', {titulo:pelicula.titulo}]">Clonar</a></li>
   </ul>
 </ul>

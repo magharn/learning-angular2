@@ -51,6 +51,7 @@ System.register(['angular2/core', 'angular2/router', './components/peliculas-lis
                     router_1.RouteConfig([
                         { path: '/peliculas', name: 'Peliculas', component: peliculas_list_component_1.PeliculasListComponent, useAsDefault: true },
                         { path: '/crear-pelicula', name: 'CrearPelicula', component: crear_pelicula_component_1.CrearPeliculaComponent },
+                        { path: '/crear-pelicula/:titulo', name: 'ClonarPelicula', component: crear_pelicula_component_1.CrearPeliculaComponent },
                         { path: '/contacto', name: 'Contacto', component: contacto_component_1.ContactoComponent }
                     ]), 
                     __metadata('design:paramtypes', [])
